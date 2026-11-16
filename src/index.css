@@ -1,0 +1,64 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Figtree', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Fraunces', ui-serif, Georgia, 'Times New Roman', serif;
+  --color-paper: #f3efe6;
+  --color-paper-2: #e8e0d0;
+  --color-ink: #1c2a24;
+  --color-ink-soft: #5d6b64;
+  --color-card: #fffcf7;
+  --color-line: #ddd4c4;
+  --color-forest: #1f6b56;
+  --color-forest-2: #154d3e;
+  --color-moss: #3d8f74;
+  --color-clay: #c46b3a;
+  --color-banner: #efe4c8;
+  --color-danger: #9b3d3d;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: var(--color-paper);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100svh;
+}
+
+h1,
+h2,
+.display {
+  font-family: var(--font-display);
+  font-optical-sizing: auto;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  opacity: 1;
+}
+
+.safe-bottom {
+  padding-bottom: max(12px, env(safe-area-inset-bottom));
+}
+
+.tap {
+  min-height: 44px;
+  min-width: 44px;
+}
